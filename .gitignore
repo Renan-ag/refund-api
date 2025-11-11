@@ -28,3 +28,8 @@ yarn-error.log
 storage/uploads
 
 !storage/uploads/.gitkeep
+
+# no .gitignore
+/tmp/*
+!/tmp/db.sqlite3
+!/tmp/.gitkeep
