@@ -4,7 +4,7 @@ export default class extends BaseSchema {
   protected tableName = 'refunds'
 
   async up() {
-    this.schema.createTable(this.tableName, (table) => {
+    this.schema.createTableIfNotExists(this.tableName, (table) => {
       table.string('id').primary().notNullable()
       table.string('title').notNullable()
       table.enum('category', ['food', 'hosting', 'transport', 'services', 'other']).notNullable()

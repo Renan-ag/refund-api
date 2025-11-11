@@ -4,7 +4,7 @@ export default class extends BaseSchema {
   protected tableName = 'receipts'
 
   async up() {
-    this.schema.createTable(this.tableName, (table) => {
+    this.schema.createTableIfNotExists(this.tableName, (table) => {
       table.string('id').primary().notNullable()
       table.string('original_filename').notNullable()
       table.string('filename').notNullable().unique()
