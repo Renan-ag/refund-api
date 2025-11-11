@@ -13,7 +13,7 @@
     "format": "prettier --write .",
     "typecheck": "tsc --noEmit",
     "db:prepare": "node ace migration:run",
-    "prestart": "mkdir -p tmp && touch tmp/db.sqlite3"
+    "prestart": "mkdir -p build/tmp && node ace migration:run --force"
   },
   "imports": {
     "#controllers/*": "./app/controllers/*.js",
