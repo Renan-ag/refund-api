@@ -13,6 +13,7 @@
     "format": "prettier --write .",
     "typecheck": "tsc --noEmit",
     "db:prepare": "node ace migration:run",
+    "postbuild": "cp -r database/migrations build/database/migrations",
     "prestart": "mkdir -p build/tmp && node ace migration:run --force"
   },
   "imports": {
