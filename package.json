@@ -14,7 +14,7 @@
     "typecheck": "tsc --noEmit",
     "db:prepare": "node ace migration:run",
     "postbuild": "cp -r database/migrations build/database/migrations",
-    "prestart": "mkdir -p build/tmp && node ace migration:run --force"
+    "prestart": "mkdir -p build/tmp && node build/ace migration:run --force"
   },
   "imports": {
     "#controllers/*": "./app/controllers/*.js",
